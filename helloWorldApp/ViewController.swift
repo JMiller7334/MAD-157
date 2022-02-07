@@ -6,17 +6,23 @@
 //
 
 import UIKit
+import SceneKit
+import ARKit
+
 
 class ViewController: UIViewController {
     
-    @IBOutlet var helloWorld: UILabel!
+    @IBOutlet var labelResult: UILabel!
+    @IBOutlet var textMessage: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        helloWorld.text = "hello world!"
     }
 
-
+    @IBAction func enterButton(_ sender: Any) {
+        labelResult.text = (textMessage.text?.uppercased())
+    }
+    
 }
 
